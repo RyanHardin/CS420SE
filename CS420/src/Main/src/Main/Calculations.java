@@ -56,28 +56,46 @@ public class Calculations {
 		roots.add(root2);
 	}
 
-	public int rationalZeroTest() {
+	public int rationalZeroTest(List<Integer> root2) {
 		int root = 0;
 		return root;
 	}
 
-	public List<Integer> synthetic(List<Integer> dividend, List<Integer> divisor, int root) {
+	public List<Integer> synthetic(List<Integer> dividend, List<Integer> root) {
+		List<Integer> poly = new ArrayList();
 		dividend = polynomial;
+		root = roots;
+
+		int divisor = rationalZeroTest(root);
 		
-		if (Integer.toString(divisor.get(0)) == "x" || Integer.toString(divisor.get(0)) == "1x") {
+		//The first coefficient is already added to the new list
+		poly.add(dividend.get(0));
+		
+		int count = dividend.get(0) * -1;
+		int num = 0;
+		int fin = 0;
+		
+		for(int i = 1; i < dividend.size(); i++) {
+			num = divisor * count;
+			fin = dividend.get(i) + num;
+			poly.add(fin);
+			count = fin;
+		}
+		
+		if (Integer.toString(root.get(0)) == "x" || Integer.toString(root.get(0)) == "1x") {
 				System.out.println("Correctly written divisor!");
 		} else {
 			System.out.println("Error: Check to see if divisor is not a first degree "
 					+ "polynomial or whether it has a coefficient greater than 1");
 		}
-		return polynomial;
+		return poly;
 	}
 
 	public void factor() {
 		if (polynomial.size() == 3) {
 			quadratic();
 		}
-		int root = rationalZeroTest();
+		//int root = rationalZeroTest();
 		// synthetic();
 
 	}

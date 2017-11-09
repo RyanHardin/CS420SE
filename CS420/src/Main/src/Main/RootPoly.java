@@ -9,14 +9,19 @@ public class RootPoly {
 		Scanner s = new Scanner(System.in);
 		// Taking co-efficient of quadratic equation
 		System.out.println("Given quadratic equation : ax^2 + bx + c");
+		
 		System.out.print("Enter a:");
 		a = s.nextInt();
+		
 		System.out.print("Enter b:");
 		b = s.nextInt();
+		
 		System.out.print("Enter c:");
 		c = s.nextInt();
+		
 		System.out.println("Given quadratic equation : " + a + "x^2 + " + b + "x + " + c);
 		d = b * b - 4 * a * c;
+		
 		// Calculating Roots for quadratic equation
 		if (d > 0) {
 			System.out.println("Roots are real and unequal");
