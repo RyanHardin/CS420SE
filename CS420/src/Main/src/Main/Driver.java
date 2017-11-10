@@ -9,26 +9,17 @@ public class Driver {
 		// TODO Auto-generated method stub
 		List<Integer> coefficient = new ArrayList<Integer>();
 		List<String> signs = new ArrayList<String>();
-		//x^2 +x + 1
-		coefficient.add(99); coefficient.add(54); coefficient.add(5);
-		//+ - +
-		signs.add("+"); signs.add("+"); signs.add("+");
-		Calculations c = new Calculations(coefficient, signs);	
-		
-		
-		List<String> str = new ArrayList();
-		str.add("1x");
-		str.add("x^2");
-		str.add("1");
-		synthetic(str);
-	}
-	
+		//10x^5+86x^4+158x^3-254x^2-792x-360
+		//Use these values to change the coefficient
+		//The values should only be positive
+		coefficient.add(10); coefficient.add(86); coefficient.add(158);coefficient.add(254); coefficient.add(792); coefficient.add(360);
+		//+ + + - - -
+		//use these strings to determine the sign of the coefficients
+		signs.add("+"); signs.add("+"); signs.add("+"); signs.add("-");signs.add("-");signs.add("-");
+		@SuppressWarnings("unused")
+		Calculations c = new Calculations(coefficient, signs);
+		Fraction root = new Fraction(6.2);
 
-	public static void synthetic(List<String> divisor) {
-		if(divisor.get(0) == "x" || divisor.get(0) == "3x") {
-			System.out.println(divisor.get(0));
-			} else {
-			System.out.println("divisor is not a first degree polynomial");		
-			}
-		}
+	}
+
 }
