@@ -81,13 +81,6 @@ public class Calculations {
 			poly.add(fin);
 			count = fin;
 		}
-		
-		if (Integer.toString(root.get(0)) == "x" || Integer.toString(root.get(0)) == "1x") {
-				System.out.println("Correctly written divisor!");
-		} else {
-			System.out.println("Error: Check to see if divisor is not a first degree "
-					+ "polynomial or whether it has a coefficient greater than 1");
-		}
 		return poly;
 	}
 
