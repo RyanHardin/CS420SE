@@ -1,5 +1,3 @@
-package Main;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,8 +15,7 @@ public class Driver {
 		//use these strings to determine the sign of the coefficients
 		signs.add("+"); signs.add("+"); signs.add("+"); signs.add("-");signs.add("-");signs.add("-");
 		@SuppressWarnings("unused")
-		Calculations c = new Calculations(coefficient, signs);
-		Fraction root = new Fraction(6.2);
+		IntegerPolynomial c = new IntegerPolynomial(coefficient, signs);
 
 	}
 
